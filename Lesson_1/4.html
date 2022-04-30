@@ -31,13 +31,13 @@
   const number = +prompt('Введите положительное целое число');
 
   if (number > 0) {
-  const units = number % 10;
-  const dozens = Math.trunc(number / 10) % 10;
-  const housend = Math.trunc(number / 100) % 10;
+    const units = number % 10;
+    const dozens = Math.trunc(number / 10) % 10;
+    const housend = Math.trunc(number / 100) % 10;
   
   console.log('В числе ' + number + ' количество сотен: ' + housend +',' + ' десятков: ' + dozens + ',' + ' единиц ' + units);
   } else {
-    alert('Вы ввели отрицательное число, попробуйте еще раз')
+    alert('Вы ввели отрицательное число, попробуйте еще раз');
   }
 
 </script>
