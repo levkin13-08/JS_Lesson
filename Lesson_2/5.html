@@ -33,7 +33,12 @@ Infinity делать не нужно, однако, в случае если б
   "use strict";
 
   console.log(mathOperation(54, 3, "+"));
-
+  
+  /* 
+  1. В данную функцию передаются значения переменных и значение оператора.
+  2. По значению оператора с помощью switch выбирается, необходимая нам функция для выполнения.
+  3. Если оператора на вход не поступило, функция вернет значение NaN.
+  */
   function mathOperation(a, b, operation) {
     switch (operation) {
       case "+": return sum(a, b);
@@ -44,10 +49,16 @@ Infinity делать не нужно, однако, в случае если б
     }
   }
 
+  /* 
+  Функция сложения двух чисел
+  */
   function sum(numberOne, numberTwo) {
     return numberOne + numberTwo;    
   }
 
+  /* 
+  Функция вычитания двух чисел, из большего вычитается меньшее
+  */
   function minus(numberOne, numberTwo) {
     if (numberOne > numberTwo) {
       return numberOne - numberTwo;
@@ -56,10 +67,16 @@ Infinity делать не нужно, однако, в случае если б
   }
   }
 
+   /* 
+  Функция умножения двух чисел
+  */
   function multiply(numberOne, numberTwo) {
     return numberOne * numberTwo;
   }
 
+  /* 
+  Функция деления двух чисел
+  */
   function share(numberOne, numberTwo) {
     return numberOne / numberTwo;
   }
