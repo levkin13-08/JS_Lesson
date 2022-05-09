@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+<body>
+<!--
+Обязательное задание.
+
+Необходимо реализовать четыре функции, каждая функция должна принимать по два
+числа и выполнять одну из операций (каждая функция выполняет одну из них):
+1. Сложение
+2. Разность
+3. Умножение
+4. Деление
+
+Необходимо сделать так, чтобы функция вернула число, например выражение
+`console.log(sum(2, 6));` должно вывести число 8 в консоль (sum - функция
+сложения в данном примере, ваши названия функций могут отличаться).
+
+Округлять значения, которые возвращают функции не нужно, однако, обратите
+внимание на разность, функция должна вычесть из большего числа меньшее, либо
+вернуть 0, если числа равны.
+
+Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать
+не нужно.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+-->
+<script>
+  "use strict";
+
+  sum(2, 6);
+  minus(34, 8);
+  multiply(4, 7);
+  share(39, 5);
+  
+   /* 
+  Функция сложения двух чисел
+  */
+  function sum(numberOne, numberTwo) {
+    return numberOne + numberTwo;    
+  }
+
+  /* 
+  Функция вычитания двух чисел, из большего вычитается меньшее
+  */
+  function minus(numberOne, numberTwo) {
+    if (numberOne > numberTwo) {
+      return numberOne - numberTwo;
+  } else {
+    return numberTwo - numberOne;
+  }
+  }
+
+   /* 
+  Функция умножения двух чисел
+  */
+  function multiply(numberOne, numberTwo) {
+    return numberOne * numberTwo;
+  }
+
+  /* 
+  Функция деления двух чисел
+  */
+  function share(numberOne, numberTwo) {
+    return numberOne / numberTwo;
+  }
+</script>
+</body>
+</html>
