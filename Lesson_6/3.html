@@ -37,20 +37,50 @@
   1. При наведении на любую из звезд, данной звезде должен ставиться класс
   golden, также такой класс должен ставиться всем звездам до нее слева.
   */
+    const starsEl = document.querySelector('.stars_container');
+    starsEl.addEventListener('mouseover', e => {
+      if(!e.target.classList.contains('fa-star')) {
+        return;
+      }
+      let star = e.target;
 
+      do {
+        star.classList.add('golden');
+        star = star.previousElementSibling;
+      } while (star);
+    });
 
   /*
   2. Когда мы уводим курсор мыши от звезды, все поставленные классы из первого
   задания должны быть удалены.
    */
+   document.querySelector('.stars_container');
+    starsEl.addEventListener('mouseout', e => {
+      if(!e.target.classList.contains('fa-star')) {
+        return;
+      }
+      let star = e.target;
 
+      do {
+        star.classList.remove('golden');
+        star = star.previousElementSibling;
+      } while (star);
+    });
 
   /*
   3. Когда мы переводим мышь от одной звезды к другой, у нас могут мигать
   звезды (временно могут становиться черными). Почему так? Напишите словами.
   Можем ли мы это исправить? Если да, то предложите решение.
+  */ 
+  /* 
+  Это возникает из за того, что между звездами есть небольшой пробел. В HTML пробел -
+  - это перенос строки.
+  Решения:
+  1. Записать все теги слитно, без пробелов.
+  2. Добавить класс "stars_container" свойство display: flex
   */
 
+  document.querySelector('.stars_container').style.display = 'flex';
 
 </script>
 </body>
